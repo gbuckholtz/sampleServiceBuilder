@@ -1,0 +1,1 @@
+create index IX_D756A49F on SOAR_REGISTRATION_LIFERAY (Name);

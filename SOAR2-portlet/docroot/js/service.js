@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.SOAR", "ca.queensu.res.soar.portlet.service", "SOAR2-portlet");

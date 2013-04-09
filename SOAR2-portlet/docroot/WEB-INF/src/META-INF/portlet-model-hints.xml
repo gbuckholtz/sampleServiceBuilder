@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="ca.queensu.res.soar.portlet.model.Registration">
+		<field name="ID" type="long" />
+		<field name="student_id" type="String" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="Name" type="String" />
+	</model>
+</model-hints>

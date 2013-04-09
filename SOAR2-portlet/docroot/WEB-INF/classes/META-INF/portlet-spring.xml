@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="ca.queensu.res.soar.portlet.service.RegistrationLocalService" class="ca.queensu.res.soar.portlet.service.impl.RegistrationLocalServiceImpl" />
+	<bean id="ca.queensu.res.soar.portlet.service.persistence.RegistrationPersistence" class="ca.queensu.res.soar.portlet.service.persistence.RegistrationPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="soarDataSource" />
+		<property name="sessionFactory" ref="SOARSessionFactory" />
+	</bean>
+</beans>

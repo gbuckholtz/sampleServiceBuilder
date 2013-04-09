@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="ca.queensu.res.soar.portlet">
+	<author>gbuckholtz</author>
+	<namespace>SOAR</namespace>
+    <entity name="Registration" local-service="true" remote-service="false" human-name="Soar Registration" table="SOAR_REGISTRATION_LIFERAY" data-source="soarDataSource" session-factory="SOARSessionFactory" tx-manager="SOARTransactionManager">
+        <column name="ID" type="long" primary="true"></column>
+        <column name="student_id" type="String"></column>
+        <column name="companyId" type="long"></column>
+        <column name="groupId" type="long"></column>
+        <column name="Name" type="String"></column>
+        <finder name="studentId" return-type="Collection" unique="true" db-index="false">
+            <finder-column name="student_id"></finder-column>
+        </finder>
+        <finder name="StudentName" return-type="Collection" unique="false">
+            <finder-column name="Name"></finder-column>
+        </finder>
+    </entity>
+</service-builder>

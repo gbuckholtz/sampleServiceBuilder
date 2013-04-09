@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="ca.queensu.res.soar.portlet.model.Registration" />
+	<class name="ca.queensu.res.soar.portlet.model.impl.RegistrationImpl" table="SOAR_REGISTRATION_LIFERAY">
+		<cache usage="read-write" />
+		<id name="ID" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="student_id" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="Name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>
